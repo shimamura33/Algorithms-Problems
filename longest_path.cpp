@@ -29,7 +29,7 @@ public:
   int numV;
   int numE;
   bool* visit;
-  Graph(){
+  Graph(){ /* initialize a graph */
     ;
   }
   
@@ -41,12 +41,8 @@ public:
       this->visit[i] = false;
   }
   
-  ~Graph(){
-    ;
-  }
-  
   void addEdge(int v1, int v2){
-    adjList[v1 - 1].push_back(v2 - 1);
+    adjList[v1 - 1].push_back(v2 - 1); /* .pushback add vector at the end */
     adjList[v2 - 1].push_back(v1 - 1);
   }
   
@@ -83,7 +79,7 @@ Graph g;
 int main()
 {
   int v, e;
-  /*freopen("input00.txt", "r", stdin);*/
+  freopen("input00.txt", "r", stdin); /* test case */
   
   for (int i=0; i < 50000; i++)
     adjList[i] = vector<int>();
@@ -113,6 +109,6 @@ int main()
   // Print the result
   cout << path.size() << endl;
   for (int i : path)
-    cout << i + 1 << " ";
+    cout << i + 1 << " "; /* print vertices of the longest path in a single line */
   cout << endl;
 }
