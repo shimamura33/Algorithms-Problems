@@ -1,3 +1,23 @@
+/*
+Goal: 
+To find the longest path in an undirected graph (cyclic or acyclic).
+
+Input: 
+The first line contains two space-separated integers describing 
+the respective values of the number of vertices and the number of edges. 
+Each line of the subsequent lines contains two space-separated integers, 
+i and j, describing an edge between vertices i and j.
+
+Output: 
+The first line contains a single integer denoting the length of the path.
+The second line contains distinct space-separated integers describing a path in 
+the same order of the longest path.
+
+To run .cpp file in bash:
+g++ -std=c++11 longest_path.cpp
+./a.out
+*/
+
 #include <iostream>
 #include <vector>
 using namespace std;
